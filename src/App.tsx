@@ -4,6 +4,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#fafaf6] text-[#2f2f2f] font-sans">
       <section className="max-w-2xl mx-auto px-6 pt-16 pb-20 text-center">
+        <img
+    src="/hero.png"
+    alt="초록담 메인 이미지"
+    className="mx-auto w-full max-w-lg mb-10"
         <h1 className="text-4xl font-bold tracking-tight mb-4">
           초록담 감성의 작은 공간
         </h1>
