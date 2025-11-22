@@ -3,67 +3,51 @@ import React from "react";
 export default function App() {
   return (
     <div className="min-h-screen bg-[#f7f7f3] text-[#2f2f2f] font-sans">
-      
-      {/* ---------------------- 헤더 ---------------------- */}
+      {/* Header */}
       <header className="w-full py-6 text-center">
-        <h1 className="text-3xl font-semibold tracking-tight">
-          🌿 초록담
-        </h1>
-        <p className="text-sm text-[#777] mt-1">
-          일상의 작은 순간들을 담아내는 공간
-        </p>
+        <div className="mx-auto flex items-center justify-center gap-2">
+          <img src="/hero.png" alt="초록담 로고" className="w-7 opacity-90" />
+          <h1 className="text-2xl tracking-tight font-medium">초록담</h1>
+        </div>
+        <p className="text-sm text-[#6f6f6f] mt-1">일상의 작은 순간들을 담아내는 공간</p>
       </header>
 
-      {/* ---------------------- 히어로 일러스트 ---------------------- */}
-      <section className="max-w-2xl mx-auto px-6 mt-10 text-center">
+      {/* Hero Illustration */}
+      <section className="max-w-md mx-auto mt-10">
         <img
           src="/hero.png"
           alt="초록담 히어로 이미지"
-          className="mx-auto w-full max-w-md mb-10 rounded-xl shadow-sm"
+          className="mx-auto w-full max-w-xs opacity-90"
         />
       </section>
 
-      {/* ---------------------- 서비스 카드 목록 ---------------------- */}
-      <section className="max-w-3xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-        
-        {/* 하루갈피 카드 */}
+      {/* Project List */}
+      <section className="max-w-md mx-auto mt-12 px-6 space-y-5">
+        {/* Daily app */}
         <a
           href="https://harugalpi.vercel.app"
-          className="bg-white p-6 rounded-2xl shadow-sm border border-[#e7e7e7] hover:shadow-md transition block"
+          className="block bg-white rounded-xl shadow-sm border border-[#e6e6e6] p-5 hover:shadow-md transition"
         >
-          <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
-            📑 하루갈피
-          </h2>
-          <p className="text-sm text-[#777] leading-relaxed">
-            조용한 감정 기록을 위한 하루 북마크 앱.
-          </p>
+          <h2 className="text-lg font-semibold">📑 하루갈피</h2>
+          <p className="text-sm text-[#777] mt-1">초록빛 감정 기록을 위한 하루 메모 앱</p>
         </a>
 
-        {/* 출시 예정 앱 1 */}
-        <div className="bg-white/70 p-6 rounded-2xl shadow-sm border border-[#e7e7e7] opacity-70">
-          <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
-            ✨ 프로젝트 B <span className="text-xs bg-gray-200 px-2 py-1 rounded-full">Soon</span>
-          </h2>
-          <p className="text-sm text-[#777]">
-            일상 루틴을 감각적으로 기록하는 도구.
-          </p>
+        {/* Soon 1 */}
+        <div className="block bg-white/60 rounded-xl shadow-sm border border-[#e6e6e6] p-5 opacity-70">
+          <h2 className="text-lg font-semibold">프로젝트 B <span className="text-xs">(Soon)</span></h2>
+          <p className="text-sm text-[#777] mt-1">일일 루틴을 감각적으로 기록하는 도구</p>
         </div>
 
-        {/* 출시 예정 앱 2 */}
-        <div className="bg-white/70 p-6 rounded-2xl shadow-sm border border-[#e7e7e7] opacity-70">
-          <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
-            🌙 프로젝트 C <span className="text-xs bg-gray-200 px-2 py-1 rounded-full">Soon</span>
-          </h2>
-          <p className="text-sm text-[#777]">
-            밤의 생각을 차분히 정리하는 저널 서비스.
-          </p>
+        {/* Soon 2 */}
+        <div className="block bg-white/60 rounded-xl shadow-sm border border-[#e6e6e6] p-5 opacity-70">
+          <h2 className="text-lg font-semibold">프로젝트 C <span className="text-xs">(Soon)</span></h2>
+          <p className="text-sm text-[#777] mt-1">일과 여행을 자연과 함께하는 감성 서비스</p>
         </div>
-
       </section>
 
-      {/* ---------------------- 푸터 ---------------------- */}
-      <footer className="text-center py-12">
-        <p className="text-sm text-[#aaa]">© 초록담 2025</p>
+      {/* Footer */}
+      <footer className="py-10 text-center text-sm text-[#9a9a9a] mt-16">
+        © 초록담 2025
       </footer>
     </div>
   );
