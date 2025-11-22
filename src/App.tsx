@@ -1,60 +1,77 @@
+// src/App.tsx
+import React from "react";
+
 export default function App() {
   return (
-    <div style={{ padding: "40px", maxWidth: "720px", margin: "0 auto" }}>
-      
-      {/* Header */}
-      <header style={{ textAlign: "center", marginBottom: "40px" }}>
-        <h1 style={{ fontSize: "28px", fontWeight: "bold" }}>초록담</h1>
-        <p style={{ color: "#555", marginTop: "8px" }}>일상에 작은 온기를 담아내는 공간</p>
-      </header>
+    <div className="app-root">
+      <main className="app-shell">
+        {/* 헤더 */}
+        <header className="app-header">
+          <h1 className="app-title">초록담</h1>
+          <p className="app-subtitle">일상에 작은 온기를 담아내는 공간</p>
+        </header>
 
-      {/* Intro */}
-      <section style={{ textAlign: "center", marginBottom: "40px" }}>
-        <p style={{ color: "#555", fontSize: "16px", lineHeight: "1.6" }}>
-          초록담은 일상 속 작은 순간을 기록하고,<br />
-          더 나은 하루를 위한 도구를 만들고 있습니다.
-        </p>
-      </section>
+        {/* 광고 영역 */}
+        <section className="app-ad">
+          <div className="app-ad-inner">
+            <p className="app-ad-label">— 광고 영역 —</p>
+            <p className="app-ad-text">
+              Google AdSense 승인 후 자동으로 광고가 표시됩니다.
+            </p>
+          </div>
+        </section>
 
-      {/* Project */}
-      <section style={{ marginBottom: "60px" }}>
-        <h2 style={{ fontSize: "20px", fontWeight: "600", marginBottom: "16px" }}>프로젝트</h2>
+        {/* 프로젝트 영역 */}
+        <section className="app-projects">
+          <p className="app-projects-label">모든 프로젝트</p>
 
-        <div
-          style={{
-            border: "1px solid #ddd",
-            borderRadius: "10px",
-            padding: "20px",
-          }}
-        >
-          <h3 style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "10px" }}>
-            하루갈피
-          </h3>
+          <div className="app-project-grid">
+            {/* 하루갈피 카드 */}
+            <article className="project-card">
+              <div className="project-icon">📑</div>
+              <h2 className="project-title">하루갈피</h2>
+              <p className="project-desc">
+                소소하지만 소중한 하루를 조용한 갈피로 남겨두는 미니멀 일기 앱.
+              </p>
+              <a
+                href="https://harugalpi.vercel.app/"
+                className="project-link"
+              >
+                하루갈피 열어보기 →
+              </a>
+            </article>
 
-          <p style={{ color: "#555", marginBottom: "16px", lineHeight: "1.5" }}>
-            소소하지만 소중한 하루들을 기록하기 위한 감성 기록 도구.
-          </p>
+            {/* 프로젝트 B – Soon */}
+            <article className="project-card project-card-soon">
+              <div className="project-icon">🌿</div>
+              <h2 className="project-title">프로젝트 B</h2>
+              <p className="project-desc">
+                감정과 장면을 담아내는 새로운 기록 도구.
+              </p>
+              <p className="project-soon">Soon…</p>
+            </article>
 
-          <a
-            href="https://harugalpi.vercel.app/"
-            style={{ color: "#2e7d32", fontWeight: "500" }}
-          >
-            하루갈피 보러가기 →
+            {/* 프로젝트 C – Soon */}
+            <article className="project-card project-card-soon">
+              <div className="project-icon">🍃</div>
+              <h2 className="project-title">프로젝트 C</h2>
+              <p className="project-desc">
+                자연과 함께하는 감성 기록 서비스.
+              </p>
+              <p className="project-soon">Soon…</p>
+            </article>
+          </div>
+        </section>
+
+        {/* 푸터 */}
+        <footer className="app-footer">
+          <span>© 초록담 2025</span>
+          <span className="app-footer-dot">·</span>
+          <a href="mailto:daily.chorokdam@gmail.com">
+            daily.chorokdam@gmail.com
           </a>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer
-        style={{
-          marginTop: "60px",
-          textAlign: "center",
-          fontSize: "13px",
-          color: "#777",
-        }}
-      >
-        © 초록담 2025 · daily.chorokdam@gmail.com
-      </footer>
+        </footer>
+      </main>
     </div>
   );
 }
