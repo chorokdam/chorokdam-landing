@@ -1,34 +1,43 @@
 export default function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 flex flex-col items-center px-6">
-
+    <div style={{ padding: "40px", maxWidth: "720px", margin: "0 auto" }}>
+      
       {/* Header */}
-      <header className="w-full max-w-3xl py-12 text-center">
-        <h1 className="text-3xl font-bold text-gray-900">초록담</h1>
-        <p className="text-gray-600 mt-2">일상에 작은 온기를 담아내는 공간</p>
+      <header style={{ textAlign: "center", marginBottom: "40px" }}>
+        <h1 style={{ fontSize: "28px", fontWeight: "bold" }}>초록담</h1>
+        <p style={{ color: "#555", marginTop: "8px" }}>일상에 작은 온기를 담아내는 공간</p>
       </header>
 
       {/* Intro */}
-      <section className="w-full max-w-3xl text-center mb-14">
-        <p className="text-gray-600 text-lg leading-relaxed">
+      <section style={{ textAlign: "center", marginBottom: "40px" }}>
+        <p style={{ color: "#555", fontSize: "16px", lineHeight: "1.6" }}>
           초록담은 일상 속 작은 순간을 기록하고,<br />
           더 나은 하루를 위한 도구를 만들고 있습니다.
         </p>
       </section>
 
-      {/* Project Card */}
-      <section className="w-full max-w-3xl mb-20">
-        <h2 className="text-xl font-semibold mb-6">프로젝트</h2>
+      {/* Project */}
+      <section style={{ marginBottom: "60px" }}>
+        <h2 style={{ fontSize: "20px", fontWeight: "600", marginBottom: "16px" }}>프로젝트</h2>
 
-        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
-          <h3 className="text-lg font-bold mb-2">하루갈피</h3>
-          <p className="text-gray-600 leading-relaxed mb-4">
+        <div
+          style={{
+            border: "1px solid #ddd",
+            borderRadius: "10px",
+            padding: "20px",
+          }}
+        >
+          <h3 style={{ fontSize: "18px", fontWeight: "bold", marginBottom: "10px" }}>
+            하루갈피
+          </h3>
+
+          <p style={{ color: "#555", marginBottom: "16px", lineHeight: "1.5" }}>
             소소하지만 소중한 하루들을 기록하기 위한 감성 기록 도구.
           </p>
 
           <a
             href="https://harugalpi.vercel.app/"
-            className="text-green-600 hover:text-green-700 font-medium"
+            style={{ color: "#2e7d32", fontWeight: "500" }}
           >
             하루갈피 보러가기 →
           </a>
@@ -36,7 +45,14 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="w-full py-8 text-center text-sm text-gray-500">
+      <footer
+        style={{
+          marginTop: "60px",
+          textAlign: "center",
+          fontSize: "13px",
+          color: "#777",
+        }}
+      >
         © 초록담 2025 · daily.chorokdam@gmail.com
       </footer>
     </div>
