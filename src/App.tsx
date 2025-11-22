@@ -1,77 +1,44 @@
 // src/App.tsx
-import React from "react";
-
 export default function App() {
   return (
-    <div className="app-root">
-      <main className="app-shell">
-        {/* 헤더 */}
-        <header className="app-header">
-          <h1 className="app-title">초록담</h1>
-          <p className="app-subtitle">일상에 작은 온기를 담아내는 공간</p>
-        </header>
+    <div className="min-h-screen bg-white text-gray-900 flex flex-col items-center px-6">
+      {/* Header */}
+      <header className="w-full max-w-3xl py-12 text-center">
+        <h1 className="text-3xl font-bold text-gray-900">초록담</h1>
+        <p className="text-gray-600 mt-2">일상에 작은 온기를 담아내는 공간</p>
+      </header>
 
-        {/* 광고 영역 */}
-        <section className="app-ad">
-          <div className="app-ad-inner">
-            <p className="app-ad-label">— 광고 영역 —</p>
-            <p className="app-ad-text">
-              Google AdSense 승인 후 자동으로 광고가 표시됩니다.
-            </p>
-          </div>
-        </section>
+      {/* Intro */}
+      <section className="w-full max-w-3xl text-center mb-14">
+        <p className="text-gray-600 text-lg leading-relaxed">
+          초록담은 일상 속 작은 순간을 기록하고,<br />
+          더 나은 하루를 위한 도구를 만들고 있습니다.
+        </p>
+      </section>
 
-        {/* 프로젝트 영역 */}
-        <section className="app-projects">
-          <p className="app-projects-label">모든 프로젝트</p>
+      {/* Project Card */}
+      <section className="w-full max-w-3xl mb-20">
+        <h2 className="text-xl font-semibold mb-6">프로젝트</h2>
 
-          <div className="app-project-grid">
-            {/* 하루갈피 카드 */}
-            <article className="project-card">
-              <div className="project-icon">📑</div>
-              <h2 className="project-title">하루갈피</h2>
-              <p className="project-desc">
-                소소하지만 소중한 하루를 조용한 갈피로 남겨두는 미니멀 일기 앱.
-              </p>
-              <a
-                href="https://harugalpi.vercel.app/"
-                className="project-link"
-              >
-                하루갈피 열어보기 →
-              </a>
-            </article>
+        <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition">
+          <h3 className="text-lg font-bold mb-2">하루갈피</h3>
+          <p className="text-gray-600 leading-relaxed mb-4">
+            소소하지만 소중한 하루들을 기록하기 위한 감성 기록 도구.
+          </p>
 
-            {/* 프로젝트 B – Soon */}
-            <article className="project-card project-card-soon">
-              <div className="project-icon">🌿</div>
-              <h2 className="project-title">프로젝트 B</h2>
-              <p className="project-desc">
-                감정과 장면을 담아내는 새로운 기록 도구.
-              </p>
-              <p className="project-soon">Soon…</p>
-            </article>
-
-            {/* 프로젝트 C – Soon */}
-            <article className="project-card project-card-soon">
-              <div className="project-icon">🍃</div>
-              <h2 className="project-title">프로젝트 C</h2>
-              <p className="project-desc">
-                자연과 함께하는 감성 기록 서비스.
-              </p>
-              <p className="project-soon">Soon…</p>
-            </article>
-          </div>
-        </section>
-
-        {/* 푸터 */}
-        <footer className="app-footer">
-          <span>© 초록담 2025</span>
-          <span className="app-footer-dot">·</span>
-          <a href="mailto:daily.chorokdam@gmail.com">
-            daily.chorokdam@gmail.com
+          <a
+            href="https://harugalpi.vercel.app/"
+            className="text-green-600 hover:text-green-700 font-medium"
+          >
+            하루갈피 보러가기 →
           </a>
-        </footer>
-      </main>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="w-full py-8 text-center text-sm text-gray-500">
+        © 초록담 2025 · daily.chorokdam@gmail.com
+      </footer>
     </div>
   );
 }
